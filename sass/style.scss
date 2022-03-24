@@ -1,15 +1,15 @@
-
-
 @import "./base/reset.scss";
 @import "./base/typo.scss";
 
 @import "./utils/variable.scss";
+@import "./utils/loader.scss";
+@import "./utils/animation-coeur.scss";
 
 @import "./component/button.scss";
-
-
+@import "./component/cards.scss";
 
 @import "./layout/header.scss";
 @import "./layout/footer.scss";
 
 @import "./pages/index.scss";
+@import "./pages/restaurants.scss";

@@ -1,129 +1,158 @@
+.inputBox {
+  display: flex;
+  justify-content: center;
+  background-color: darken($color-back, 5);
+  margin-top: 70px;
 
-.inputBox{
+  input {
+    width: 40%;
+    display: block;
+    padding: 15px 15px;
+    border: none;
+    background-color: darken($color-back, 5);
+  }
+  .localisation {
+    padding: 15px 0;
+  }
+}
+
+/* ----   EXPLORER ----*/
+
+.explorer {
+  text-align: center;
+  padding: 0 $gutter;
+  padding-top: 0;
+  padding-bottom: 50px;
+  background-color: $color-back;
+
+  h2 {
+    width: 80%;
+    margin: auto;
+    padding-top: 40px;
+  }
+  p {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+}
+
+/* -----  FONCTIONNEMENT ----*/
+
+.fonctionnement {
+  padding: 50px $gutter;
+  padding-bottom: 40px;
+
+  h2 {
+    padding-bottom: 20px;
+  }
+
+  &__card {
     display: flex;
-    justify-content: center;
-    background-color:darken($color-back, 5);
-    margin-top: 70px;
+    align-items: center;
+    position: relative;
+    padding: 25px 0;
+    margin: 30px 0;
+    margin-left: 10px;
+    background-color: $color-back;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
 
-    input{
-        width: 40%;
-        display: block;
-        padding: 15px 15px;
-        border: none;
-        background-color:darken($color-back, 5);
+    &:hover {
+      background: lighten($color-primary, 35);
     }
-        .localisation{
-            position: relative;
-            top: 17px;
-        }
-}
+    &:hover > i {
+      color: $color-primary;
+    }
+  }
 
-
-.explorer{
+  p {
+    font-size: 1em;
+    font-weight: 500;
+  }
+  i {
+    padding-left: 40px;
+    padding-right: 20px;
+    position: relative;
     text-align: center;
-    padding: 0 $gutter;
-    padding-top: 0;
-    padding-bottom: 50px;
-    background-color: $color-back;
-  
-     h2{
-        width: 80%;
-        margin: auto;
-        padding-top: 40px;
-    }
-     p{
-        padding-top: 20px;
-        padding-bottom: 30px;
-    }   
+    color: darken($color-back, 50);
+    font-size: 1.1em;
+  }
+  .mobile {
+    font-size: 1.5em;
+  }
+  .numero {
+    position: absolute;
+    top: 50%;
+    left: -12.5px;
+    transform: translateY(-50%);
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    line-height: 25px;
+    color: white;
+    border-radius: 50%;
+    background-color: $color-primary;
+  }
 }
 
-.fonctionnement{
-    padding: 50px $gutter ;
-    padding-bottom: 40px;
+/* ---- RESTURANT ----*/
 
-    h2{
-        padding-bottom: 20px;
-    }
+.indexRestaurant {
+  background-color: $color-back;
+  padding: 0px $gutter;
+  padding-bottom: 50px;
 
-    &__card{
-        position: relative;
-        display: flex;
-        margin: 30px 0;
-        margin-left: 10px;
-        text-align: center;
-        background-color: $color-back;
-        border-radius: 25px;
-        box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.1);
+  &__card {
+    position: relative;
+    display: block;
+    margin: 20px 0;
+  }
+  .nouveau {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    padding: 6px 10px;
+    background: $color-tertiary;
+    color: darken($color-tertiary, 40);
+    border-radius: 2px;
+  }
+  img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+  }
+  h2 {
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+  p {
+    font-size: 1.15em;
+  }
+  &__explication {
+    position: relative;
+    top: -2px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-radius: 0 0 20px 20px;
+    background-color: white;
+    margin: 0;
+
+    &__col1 {
+      padding-left: 15px;
+      line-height: 1.4;
     }
-    &__para{
-        padding: 25px;
-        font-size: 1.1em;
-        font-weight: 400;
+    &__col2 {
+      padding-right: 15px;
     }
-    img{
-        top: 0;
-        left: 0;
-        width: 20px;
-        margin-left: 45px;     
+    .coeurBox {
+      padding-right: 15px;
+      padding-top: 5px;
+      &__coeur::after {
+        background: white;
+      }
     }
-    .numero{
-        width: 25px;
-        height: 25px;      
-        line-height: 25px;
-        position: absolute;
-        top: 23px;
-        left: -12.5px;
-        border-radius: 50%;
-        color: white;
-        background-color: $color-primary;
-    } 
+  }
 }
-
-.indexRestaurant{
-    background-color: $color-back;
-    padding: 0px $gutter;
-    padding-bottom: 50px;
-
-    &__card{
-        display: block;
-        margin: 20px 0;
-    }
-
-
-    &__wrapperImage{
-        overflow: hidden;
-        width: 100%;
-        height: 170px;
-        border-radius: 20px 20px 0 0;
-    }
-
-    h2{
-        padding-top: 50px;
-        padding-bottom: 20px;
-    }
- 
-
-    &__explication{
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        padding: 15px 0;
-        border-radius: 0 0 20px 20px;
-        background-color: white;
-
-        &__col1{
-            padding-left: 15px;
-        }
-        &__col2{
-            padding-right: 15px;
-        }
-        .coeur{
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 2em;
-        }
-    }
-}
-
-
